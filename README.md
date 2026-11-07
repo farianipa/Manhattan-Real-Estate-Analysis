@@ -9,6 +9,10 @@ This project looks at Manhattan property sales from the NYC Department of Financ
 1. Which Manhattan neighborhoods have the most recorded property sales?
 2. How do sale prices differ by neighborhood and building type? Where can price per square foot actually be calculated?
 
+## Why This Project?
+
+Real estate decisions depend on knowing where sales are happening and what properties actually sell for. Manhattan's public sales data has a lot of gaps, though, and those gaps affect which comparisons are fair. I wanted to practice the full process a business analyst would follow: check the data quality first, then analyze sales volume and prices by neighborhood and building type, then present the results in a dashboard.
+
 ## Dataset
 
 - **Source:** [NYC Department of Finance Rolling Sales Data](https://www.nyc.gov/site/finance/taxes/property-rolling-sales-data.page)
