@@ -20,7 +20,7 @@ Sales volume and pricing patterns show where real estate activity is concentrate
 - **Reporting period:** October 1, 2025 to September 30, 2026
 - **Raw records:** 19,615
 - **Cleaned records:** To be updated after Phase 1
-- **Data downloaded:** [add date]
+- **Data downloaded:** November 6, 2026
 - **File format:** Excel (.xlsx)
 
 The data includes addresses, neighborhoods, building types, sale prices, sale dates, property sizes, and construction years.
@@ -37,11 +37,11 @@ The data includes addresses, neighborhoods, building types, sale prices, sale da
 
 ### Phase 1: Excel Data Cleaning and Exploration (in progress)
 
-- Reviewing all 19,615 records
-- Documenting missing values and data-quality issues
-- Checking for duplicates and inconsistent formatting
-- Investigating $0 transactions and non-arms-length sales
-- Reviewing missing property information by building class
+- Reviewing all 19,615 records.
+- Documenting missing values and data-quality issues.
+- Checking for duplicates and inconsistent formatting.
+- Investigating $0 transactions and identifying records that may not reflect market-value sales.
+- Reviewing missing property information by building class.
 
 ### Phase 2: SQL Analysis (upcoming)
 
@@ -52,9 +52,10 @@ The data includes addresses, neighborhoods, building types, sale prices, sale da
 
 ### Phase 3: Tableau Dashboard (upcoming)
 
-- Map of sales volume by neighborhood
-- Price comparison across building types
-- Filters for neighborhood, building type, and sale date
+- Calculating sales volume by neighborhood.
+- Comparing average and median sale prices by neighborhood.
+- Examining sales patterns by building type.
+- Calculating price per square foot for records with valid sale prices and reported property sizes.
 
 ## Key Findings
 
@@ -62,14 +63,20 @@ Coming soon. Findings will be added here as each phase is completed.
 
 ## Limitations
 
-- The data covers recorded sales only and does not represent the whole market.
-- $0 transfers and non-arms-length sales do not reflect market prices and may be excluded from price analysis.
+- The dataset covers recorded property sales during a 12-month period and does not represent the entire real estate market.
+- $0 transactions and certain non-market transfers may not reflect typical market-value sales and will be evaluated before inclusion in price comparisons.
 - Some records are missing square footage, so price per square foot will use a smaller set of records than the full dataset.
 
 ## Repository Structure (planned)
 
 ```
-excel/       cleaning notes and cleaned data
-sql/         query files
-dashboard/   Tableau screenshots and link
+Manhattan-Real-Estate-Analysis/
+├── README.md
+├── data/
+│   ├── raw/
+│   └── cleaned/
+├── excel/
+├── sql/
+├── tableau/
+└── visuals/
 ```
