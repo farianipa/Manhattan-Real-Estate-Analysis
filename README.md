@@ -1,71 +1,74 @@
 # Manhattan Real Estate Sales Analysis
 
-An analysis of Manhattan property sales using Excel, SQL, and Tableau to look at neighborhood sales activity and how prices differ by neighborhood and building type.
+This project looks at Manhattan property sales from the NYC Department of Finance, using Excel for cleaning, SQL for analysis, and Tableau for the final dashboard.
 
-**Project status:** In progress (Phase 1 of 3)
+**Status:** Phase 1 of 3 in progress (Excel data cleaning)
 
 ## Questions
 
-1. Which Manhattan neighborhoods have the highest number of recorded property sales?
-2. How do sale prices and price per square foot differ across neighborhoods and building types?
-
-## Why It Matters
-
-Sales volume and pricing patterns show where real estate activity is concentrated and how different property types compare. Real estate firms, property managers, and investors use this kind of analysis to guide market research, pricing decisions, and where to focus resources.
+1. Which Manhattan neighborhoods have the most recorded property sales?
+2. How do sale prices differ by neighborhood and building type? Where can price per square foot actually be calculated?
 
 ## Dataset
 
-- **Source:** [NYC Department of Finance: Rolling Sales Data](https://www.nyc.gov/site/finance/taxes/property-rolling-sales-data.page)
-- **Area:** Manhattan, New York City
-- **Reporting period:** October 1, 2025 to September 30, 2026
-- **Raw records:** 19,615
-- **Cleaned records:** To be updated after Phase 1
-- **Data downloaded:** November 6, 2026
-- **File format:** Excel (.xlsx)
-
-The data includes addresses, neighborhoods, building types, sale prices, sale dates, property sizes, and construction years.
+- **Source:** [NYC Department of Finance Rolling Sales Data](https://www.nyc.gov/site/finance/taxes/property-rolling-sales-data.page)
+- **Period:** October 1, 2025 to September 30, 2026
+- **Records:** 19,615 raw records, 21 columns
+- **Cleaned records:** to be added after Phase 1
+- **Downloaded:** November 6, 2026
 
 ## Tools
 
-| Tool | Purpose |
-|---|---|
-| Microsoft Excel | Data cleaning, quality checks, and initial exploration |
-| SQL | Querying sales data and identifying patterns |
-| Tableau | Interactive dashboard and maps |
+- **Excel:** data cleaning, quality checks, initial exploration
+- **SQL:** sales volume and price analysis
+- **Tableau:** dashboard
 
-## Workflow
+## Progress
 
-### Phase 1: Excel Data Cleaning and Exploration (in progress)
+### Phase 1: Excel cleaning and exploration (in progress)
 
-- Reviewing all 19,615 records.
-- Documenting missing values and data-quality issues.
-- Checking for duplicates and inconsistent formatting.
-- Investigating $0 transactions and identifying records that may not reflect market-value sales.
-- Reviewing missing property information by building class.
+The workbook has four sheets: the original data (Manhattan), a Data Quality Log, a Category Summary, and a Missing Sq Ft Analysis.
 
-### Phase 2: SQL Analysis (upcoming)
+So far I have:
 
-- Sales volume by neighborhood
-- Average and median sale price by neighborhood
-- Sales patterns by building type
-- Price per square foot for records with a valid price and size
+- imported all 19,615 records and confirmed the 21 original columns
+- measured three data quality issues (see below)
+- built PivotTables showing how missing square footage varies by building category
 
-### Phase 3: Tableau Dashboard (upcoming)
+Still to do:
 
-- Calculating sales volume by neighborhood.
-- Comparing average and median sale prices by neighborhood.
-- Examining sales patterns by building type.
-- Calculating price per square foot for records with valid sale prices and reported property sizes.
+- check for duplicates and inconsistent formatting
+- investigate the $0 sales to see which ones are not market transactions
+- create the cleaned dataset
 
-## Key Findings
+### Phase 2: SQL analysis (upcoming)
 
-Coming soon. Findings will be added here as each phase is completed.
+Sales volume by neighborhood, average and median sale price by neighborhood, sales by building type, and price per square foot for records with a valid price and size.
+
+### Phase 3: Tableau dashboard (upcoming)
+
+A dashboard showing sales volume by neighborhood, price comparisons that can be filtered by building type, and which building types have usable square footage data.
+
+## Preliminary Findings
+
+| Issue | Records | Share of dataset |
+|---|---|---|
+| $0 sale price | 4,303 | 21.93% |
+| Missing year built | 2,007 | 10.23% |
+| Missing gross square feet | 17,795 | 90.72% |
+
+Missing square footage is not random. One, two, and three family dwellings have it for every record, while condo and co-op categories, including elevator apartments, are missing it 100% of the time. This matters for price per square foot, since most condos and co-ops can't be included.
+
+About one in five records has a $0 sale price. I'm keeping them for now and will look at what kind of transactions they are before using them in any price calculations.
+
+The full breakdown is in the Data Quality Log sheet of the workbook. More findings will be added as I finish each phase.
 
 ## Limitations
 
-- The dataset covers recorded property sales during a 12-month period and does not represent the entire real estate market.
-- $0 transactions and certain non-market transfers may not reflect typical market-value sales and will be evaluated before inclusion in price comparisons.
-- Some records are missing square footage, so price per square foot will use a smaller set of records than the full dataset.
+- The data covers 12 months of recorded sales, so it doesn't represent the whole market and can't support year-over-year trends.
+- $0 sales and other non-market transfers may not reflect real market prices. I'll decide how to handle them before comparing prices.
+- Price per square foot will only use records with a valid price and square footage, which leaves out most condos and co-ops.
+- Building age analysis will only include records that have a year built.
 
 ## Repository Structure (planned)
 
