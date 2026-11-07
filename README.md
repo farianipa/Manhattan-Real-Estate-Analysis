@@ -74,7 +74,7 @@ The full breakdown is in the Data Quality Log sheet of the workbook. More findin
 - Price per square foot will only use records with a valid price and square footage, which leaves out most condos and co-ops.
 - Building age analysis will only include records that have a year built.
 
-## Repository Structure (planned)
+## Repository Structure 
 
 ```
 Manhattan-Real-Estate-Analysis/
