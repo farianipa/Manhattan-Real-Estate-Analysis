@@ -65,8 +65,8 @@ Missing square footage is concentrated in specific building types. In my PivotTa
 
 About one in five records has a $0 sale price. I'm keeping them for now and will look at what kind of transactions they are before using them in any price calculations.
 
-The full breakdown is in the Data Quality Log sheet of the workbook. More findings will be added as I finish each phase.
 
+The full breakdown is in the Data Quality Log sheet of the workbook (`excel/manhattan_sales_analysis.xlsx`, download to view). More findings will be added as I finish each phase.
 ![Data Quality Log](visuals/Data_Quality_Log.png)
 
 
