@@ -2,7 +2,7 @@
 
 This project looks at Manhattan property sales from the NYC Department of Finance, using Excel for cleaning, SQL for analysis, and Tableau for the final dashboard.
 
-**Status:** Phase 1 of 3 in progress (Excel data cleaning)
+**Status:** In progress Phase 1 of 3
 
 ## Questions
 
@@ -61,7 +61,7 @@ A dashboard showing sales volume by neighborhood, price comparisons that can be 
 | Missing year built | 2,007 | 10.23% |
 | Missing gross square feet | 17,795 | 90.72% |
 
-Missing square footage is not random. One, two, and three family dwellings have it for every record, while condo and co-op categories, including elevator apartments, are missing it 100% of the time. This matters for price per square foot, since most condos and co-ops can't be included.
+Missing square footage is concentrated in specific building types. In my PivotTable, one, two, and three family dwellings have square footage for every record, while categories like Condos – Elevator Apartments, Co-ops – Elevator Apartments, and Condo Co-ops are missing it 100% of the time. This limits price per square foot analysis for those property types. I haven't verified why the data is missing yet.
 
 About one in five records has a $0 sale price. I'm keeping them for now and will look at what kind of transactions they are before using them in any price calculations.
 
@@ -74,7 +74,7 @@ The full breakdown is in the Data Quality Log sheet of the workbook. More findin
 - Price per square foot will only use records with a valid price and square footage, which leaves out most condos and co-ops.
 - Building age analysis will only include records that have a year built.
 
-## Repository Structure 
+## Repository Structure (planned)
 
 ```
 Manhattan-Real-Estate-Analysis/
