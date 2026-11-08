@@ -67,6 +67,9 @@ About one in five records has a $0 sale price. I'm keeping them for now and will
 
 The full breakdown is in the Data Quality Log sheet of the workbook. More findings will be added as I finish each phase.
 
+![Data Quality Log](visuals/Data_Quality_Log.png)
+
+
 ## Limitations
 
 - The data covers 12 months of recorded sales, so it doesn't represent the whole market and can't support year-over-year trends.
