@@ -34,14 +34,15 @@ Real estate decisions depend on knowing where sales are happening and what prope
 The workbook has four sheets: the original data (Manhattan), a Data Quality Log, a Category Summary, and a Missing Sq Ft Analysis.
 
 So far I have:
-
 - imported all 19,615 records and confirmed the 21 original columns
 - measured three data quality issues (see below)
+- checked for duplicates (none found) and confirmed missing year built values are blank cells, not zeros
+- reviewed key columns for formatting inconsistencies (none found)
+- added an indicator column for missing square footage
 - built PivotTables showing how missing square footage varies by building category
 
 Still to do:
 
-- check for duplicates and inconsistent formatting
 - investigate the $0 sales to see which ones are not market transactions
 - create the cleaned dataset
 
